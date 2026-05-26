@@ -1,0 +1,325 @@
+﻿<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>דוגמת אתר — תבנית לעסק שלך</title>
+  <meta name="description" content="דוגמת אתר קולנועי. ראה איך העסק שלך ייראה באינטרנט.">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- ═══ LOADER ═══ -->
+  <div id="loader">
+    <div class="loader-content">
+      <div class="loader-logo"><img src="assets/logo.svg" alt="דוגמה" class="loader-logo-img"> החברה שלך</div>
+      <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
+      <div class="loader-pct" id="loaderPct">0%</div>
+    </div>
+  </div>
+
+  <!-- ═══ SCROLL CANVAS ═══ -->
+  <canvas id="scrollCanvas"></canvas>
+
+  <!-- ═══ HEADER ═══ -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <img src="assets/logo.svg" alt="דוגמה" class="logo-img">
+        <span class="gradient-text">החברה שלך</span>
+      </a>
+      <nav class="desktop-nav" id="desktopNav">
+        <a href="#" class="nav-link active" data-section="0">ראשי</a>
+        <a href="#" class="nav-link" data-section="1">שירותים</a>
+        <a href="#" class="nav-link" data-section="2">פרויקטים</a>
+        <a href="#" class="nav-link" data-section="3">גיאוגרפיה</a>
+        <a href="#" class="nav-link" data-section="4">עלינו</a>
+        <a href="#" class="nav-link" data-section="5">צור קשר</a>
+      </nav>
+      <a href="tel:#" class="header-cta">הטלפון שלך</a>
+      <button class="burger" id="burger" aria-label="תפריט">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="#" class="nav-link" data-section="0">ראשי</a>
+      <a href="#" class="nav-link" data-section="1">שירותים</a>
+      <a href="#" class="nav-link" data-section="2">פרויקטים</a>
+      <a href="#" class="nav-link" data-section="3">גיאוגרפיה</a>
+      <a href="#" class="nav-link" data-section="4">עלינו</a>
+      <a href="#" class="nav-link" data-section="5">צור קשר</a>
+    </nav>
+  </header>
+
+  <!-- ═══ UI LAYER ═══ -->
+  <div id="ui-layer">
+
+    <!-- ── SECTION 0: HERO ── -->
+    <section class="page" id="page-0">
+      <div class="page-inner hero-content">
+        <img src="assets/logo.svg" alt="דוגמה" class="hero-logo reveal">
+        <div class="hero-badge">המותג שלך • הנישה שלך • ההתמחות שלך</div>
+        <h1 class="hero-title">
+          כאן יהיה שם<br>
+          <span class="gradient-text">שלךЕЙ</span><br>
+          <span class="hero-title-sub">החברה</span>
+        </h1>
+        <p class="hero-sub">כאן אתה יכול לכתוב את הסלוגן שלך, תיאור קצר או הצעה חמה — כל מה שתרצה!</p>
+        <div class="hero-buttons">
+          <a href="#" class="btn btn-primary" data-section="5">כפתור מותאם</a>
+          <a href="#" class="btn btn-outline" data-section="2">הקישורים שלך</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-num gradient-text">18+</span><span class="stat-label">שנות ניסיון</span></div>
+          <div class="stat"><span class="stat-num gradient-text">500+</span><span class="stat-label">אובייקטов</span></div>
+          <div class="stat"><span class="stat-num gradient-text">12</span><span class="stat-label">מדינות</span></div>
+          <div class="stat"><span class="stat-num gradient-text">100%</span><span class="stat-label">אחריות</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION 1: SERVICES ── -->
+    <section class="page" id="page-1">
+      <div class="page-inner">
+        <h2 class="section-title">שלךи <span class="gradient-text">שירותים</span></h2>
+        <p class="section-sub">כאן אתה יכול לספר על ההצעה שלך כמו בדוגמאות למטה.</p>
+        <div class="cards-grid services-grid">
+          <div class="card reveal">
+            <div class="card-icon">🏗️</div>
+            <h3>בנייה ביתов</h3>
+            <p>פרטיים מגורים, קוטג׳ים и שאלה מ 80 עד 2 000 м². שלד-מונוליטית, לבנים, עץ טכנולוגיות. חסכון אנרגטי סוג А+.</p>
+            <div class="card-price">от 85 000 ₪/м²</div>
+          </div>
+          <div class="card reveal">
+            <div class="card-icon">🏛️</div>
+            <h3>שחזור מורשת תרבותית</h3>
+            <p>שחזור אובייקטов תרבותי מורשת לפי רישיונות משרד התרבות. חזיתות, גבס דקורטיבי, פניםы, ציור. מוסמכים משחזרים I-II катשלוрии.</p>
+            <div class="card-price">רישיון משרד התרבות</div>
+          </div>
+          <div class="card reveal">
+            <div class="card-icon">📐</div>
+            <h3>תכנון</h3>
+            <p>אדריכלי и מבני תכנון. 3D-ויזואליזציה, BIM-דגמים, עבודה תיעוד, פיקוח מקצועי על כלх שלביםх.</p>
+            <div class="card-price">3D + BIM</div>
+          </div>
+          <div class="card reveal">
+            <div class="card-icon">🔧</div>
+            <h3>שיקום</h3>
+            <p>כללי שיקום с שינוי תכנון. חיזוק יסודות, תוספת קומות, מודרניזציה הנדסה מערכות.</p>
+            <div class="card-price">от 45 000 ₪/м²</div>
+          </div>
+          <div class="card reveal">
+            <div class="card-icon">🌍</div>
+            <h3>חו"ל פרויקטы</h3>
+            <p>בנייה и שחזור в אירופה, אילת, ישראל. ידע בינלאומיים סטנדרטארטов, משפטי ליווי, חודשיםтные אישורים.</p>
+            <div class="card-price">12 מדינות</div>
+          </div>
+          <div class="card reveal">
+            <div class="card-icon">🎨</div>
+            <h3>פנים и נוף</h3>
+            <p>פרימיום גימור פניםов, רכבрский עיצוב, נוף עיצוב מגרש. ריהוט על הזמנה, חכם בית, מולטי-רום.</p>
+            <div class="card-price">פרימיום</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION 2: PROJECTS ── -->
+    <section class="page" id="page-2">
+      <div class="page-inner">
+        <h2 class="section-title">כאן יכולות להיות <span class="gradient-text">דוגמאות לעבודות שלך</span></h2>
+        <p class="section-sub">הוסף את מה שירשים את כולם</p>
+        <div class="cards-grid projects-grid">
+          <div class="card project-card reveal">
+            <div class="project-tag">דוגמה</div>
+            <h3>מתחם «קרן»</h3>
+            <p class="project-meta">📍 אזור А &bull; 450 м² &bull; מונולית</p>
+            <p>מגורים מתחם с פנורמי זיגוג и שימושי גג. גיאותרמי חימום, מערכת חכם בתים.</p>
+            <div class="project-stats">
+              <span>⏱ 14 חודשים.</span><span>💰 פרימיום</span><span>⭐ 5.0</span>
+            </div>
+          </div>
+          <div class="card project-card reveal">
+            <div class="project-tag tag-restore">דוגמה</div>
+            <h3>בניין «מורשת», XX מאה</h3>
+            <p class="project-meta">📍 אזור Б &bull; 1 200 м² &bull; שחזור</p>
+            <p>מלאה שחזור חזיתות, שחזור דקורטיביים אלמנטים לפי ארכיוניים שרטוטים. שחזור פניםов.</p>
+            <div class="project-stats">
+              <span>⏱ 24 חודשים.</span><span>🏅 מומחית הערכה</span><span>⭐ 5.0</span>
+            </div>
+          </div>
+          <div class="card project-card reveal">
+            <div class="project-tag tag-abroad">דוגמה</div>
+            <h3>וילה «ימי בריזה»</h3>
+            <p class="project-meta">📍 חוף &bull; 320 м² &bull; ים תיכוני</p>
+            <p>וילה с נוף על מפרץ. טבעי אבן, מרפסות, בריכה. מחזור מלא מ רכישות מגרש עד ריהוט.</p>
+            <div class="project-stats">
+              <span>⏱ 18 חודשים.</span><span>🌊 ראשונה קו</span><span>⭐ 5.0</span>
+            </div>
+          </div>
+          <div class="card project-card reveal">
+            <div class="project-tag">דוגמה</div>
+            <h3>שאלה «פסגה»</h3>
+            <p class="project-meta">📍 הרי נופש &bull; 280 м² &bull; עץ + אבן</p>
+            <p>הר שאלה על גובה 1 800 м. גג מ טבעי חומר, פנורמיים מורשת תרבותיתа. רכבномная מערכת חימום.</p>
+            <div class="project-stats">
+              <span>⏱ 12 חודשים.</span><span>🏔️ 1 800 м</span><span>⭐ 5.0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION 3: GEOGRAPHY ── -->
+    <section class="page" id="page-3">
+      <div class="page-inner">
+        <h2 class="section-title">שלנוа <span class="gradient-text">גיאוגרפיה</span></h2>
+        <p class="section-sub">ספר על איך נראה שיתוף הפעולה שלך עם לקוחות, כמו בדוגמה למטה</p>
+        <div class="geo-layout">
+          <div class="card geo-card reveal">
+            <h3 class="gradient-text">🇷🇺 ישראל</h3>
+            <ul class="geo-list">
+              <li>תל אביב и גוש דן — 200+ אובייקטов</li>
+              <li>תל-יפו — שחזור מורשת תרבותית</li>
+              <li>הדרום מחוז и אילת</li>
+              <li>עין גדי מינרליים מים</li>
+              <li>גליל — חוף וילות</li>
+              <li>ירושלים, באר שבע, ראשון לציון</li>
+            </ul>
+          </div>
+          <div class="card geo-card geo-card-intl reveal">
+            <h3 class="gradient-text">🌍 בחו״ל</h3>
+            <ul class="geo-list">
+              <li>🇲🇪 קפריסין — לרנקה, נתניה, קוטור</li>
+              <li>🇹🇷 טורקיה — חדרה, הרצליה, עכו</li>
+              <li>🇦🇪 אילת — דובאי, אילת-דאבי</li>
+              <li>🇨🇾 קפריסין — פאפוס, לימסול</li>
+              <li>🇬🇪 יוון — אתונה, טבריה</li>
+              <li>🇷🇸 קרואטיה — אשדוד, נובי-גן</li>
+            </ul>
+          </div>
+          <div class="card geo-card process-card reveal">
+            <h3 class="gradient-text">📋 תהליך עבודה</h3>
+            <div class="process-steps">
+              <div class="step"><span class="step-num">01</span><span>חינם ייעוץ и ניתוח מגרש</span></div>
+              <div class="step"><span class="step-num">02</span><span>תכנון и 3D-ויזואליזציה</span></div>
+              <div class="step"><span class="step-num">03</span><span>קיבוע הצעת מחיר и חתימה חוזה</span></div>
+              <div class="step"><span class="step-num">04</span><span>בנייה / שחזור с רכבрским פיקוח</span></div>
+              <div class="step"><span class="step-num">05</span><span>קבלה, אחריות 5 שנות, לאחר אחריות обслужיצחקие</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION 4: WHY US ── -->
+    <section class="page" id="page-4">
+      <div class="page-inner">
+        <h2 class="section-title"><span class="gradient-text">עלינו</span></h2>
+        <p class="section-sub">ספר על ההישגים החברה שלך, שתף ביקורות טובות</p>
+        <div class="cards-grid about-grid">
+          <div class="card reveal">
+            <div class="card-icon">✅</div>
+            <h3>מחזור מלא</h3>
+            <p>От סקיצה עד מפתחות — תכנון, בנייה, גימור. אחד קבלן, אחד חוזה. חברה «אוריון בנייה».</p>
+          </div>
+          <div class="card reveal">
+            <div class="card-icon">📊</div>
+            <h3>הצעת מחיר קבועה</h3>
+            <p>שקופה הצעת מחיר в חוזה. Ниאיךих נסתרים תשלומים נוספים. חברה «גרניט אינווסט» ממליץ.</p>
+          </div>
+          <div class="card reveal">
+            <div class="card-icon">🏆</div>
+            <h3>רישיונות</h3>
+            <p>מלא חבילה רישיונות и פעמיםפתרונות. הסמכה «אלפא סטנדרטארט». ISO 9001:2015.</p>
+          </div>
+          <div class="card reveal">
+            <div class="card-icon">🌐</div>
+            <h3>גיאוגרפיה</h3>
+            <p>פרויקטы в פעמיםных ערים. יודעים תקנים, עבודותаем с חודשיםтными קבלנים «בע״מ וקטור גרופ».</p>
+          </div>
+        </div>
+        <div class="testimonials-row">
+          <div class="testimonial card reveal">
+            <blockquote>«בנינו אובייקט — מ רכישות מגרש עד ריהוט. הכל בבירור, в מועד и ללא תשלומים נוספים. ממליצים!»</blockquote>
+            <cite>— לקוח «סטארפאת בע״מ»</cite>
+          </div>
+          <div class="testimonial card reveal">
+            <blockquote>«שחזור שלנושלו בניינים — תכשיטנית עבודותа. כל פרט שוחזרה לפי ארכיוניים חומרм.»</blockquote>
+            <cite>— קרן «גלקסיה בע״מ»</cite>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION 5: CONTACTS ── -->
+    <section class="page" id="page-5">
+      <div class="page-inner">
+        <h2 class="section-title">לדון <span class="gradient-text">פרויקט</span></h2>
+        <p class="section-sub">ציין כאן את פרטי הקשר, הכתובת ורשתות חברתיות שלך כדי שלקוחות יוכלו ליצור קשר</p>
+        <div class="contact-layout">
+          <form class="contact-form card reveal" id="contactForm">
+            <input type="text" placeholder="השם שלך והחברה" required id="inputName">
+            <input type="tel" placeholder="+972-__-___-____" required id="inputPhone">
+            <select id="inputNiche">
+              <option value="">הנישה שלך</option>
+              <option>רפואה / יופי</option>
+              <option>מסעדות / HoReCa</option>
+              <option>בנייה / שיפוצים</option>
+              <option>אדריכלות / עיצוב</option>
+              <option>IT / ייעוץ</option>
+              <option>רכב / דיטיילינג</option>
+              <option>כושר / ספורט</option>
+              <option>חינוך</option>
+              <option>תיירות / מלונות</option>
+              <option>ייצור</option>
+              <option>אחר</option>
+            </select>
+            <select id="inputBudget">
+              <option value="">תקציב לאתר</option>
+              <option>2,000 – 4,000 ₪</option>
+              <option>4,000 – 7,000 ₪</option>
+              <option>7,000 – 12,000 ₪</option>
+              <option>מעל 12,000 ₪</option>
+            </select>
+            <textarea placeholder="מה אתה רוצה לקבל מהאתר? מהו האתר הנוכחי (קישור)?" rows="3" id="inputMessage"></textarea>
+            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">להזמין אתר</button>
+            <p class="form-note">נענה תוך 2 שעות בשעות העבודה. ללא ספאם.</p>
+          </form>
+          <div class="contact-info card reveal">
+            <div class="contact-row">
+              <span class="contact-icon">📞</span>
+              <div><strong>טלפון</strong><a href="tel:#">הטלפון שלך</a></div>
+            </div>
+            <div class="contact-row">
+              <span class="contact-icon">📧</span>
+              <div><strong>אימייל</strong><a href="mailto:#">האימייל שלך</a></div>
+            </div>
+            <div class="contact-row">
+              <span class="contact-icon">📍</span>
+              <div><strong>ראשי משרד</strong><span>הכתובת שלך</span></div>
+            </div>
+            <div class="contact-row">
+              <span class="contact-icon">🕐</span>
+              <div><strong>שעות עבודה</strong><span>א׳–ה׳: 09:00 – 19:00, ו׳: 10:00 – 16:00</span></div>
+            </div>
+            <div class="contact-row">
+              <span class="contact-icon">💬</span>
+              <div><strong>מסנג׳רים</strong><span>WhatsApp • Telegram • Viber</span></div>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:32px">
+          <a href="https://unityspirit.github.io/global-plus-il/#page-4" class="btn btn-outline" style="font-size:16px;padding:14px 40px">חזרה לעמוד הראשי</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
